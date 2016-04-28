@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/home/teocci/AndroidSRC/Camtest0110/app/build/intermediates/res/merged/debug/layout/main.xml",
+        "source": "/home/teocci/AndroidSRC/Camtest0110/app/src/main/res/layout/main.xml"
+    },
+    {
         "merged": "/home/teocci/AndroidSRC/Camtest01101/app/build/intermediates/res/merged/debug/layout/main.xml",
         "source": "/home/teocci/AndroidSRC/Camtest01101/app/src/main/res/layout/main.xml"
     }
