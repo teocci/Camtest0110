@@ -1,0 +1,2 @@
+CHANGED,/home/teocci/AndroidSRC/Camtest01101/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/android/tools/fd/runtime/AppPatchesLoaderImpl.class
+CHANGED,/home/teocci/AndroidSRC/Camtest01101/app/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/astarasikov/camerastreaming/net/http/HttpServer$1$override.class

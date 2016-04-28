@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="filter_values">
+        <item>gaussian-blur</item>
+        <item>box-blur</item>
+        <item>emboss</item>
+        <item>sharpen</item>
+        <item>edge-detection</item>
+    </string-array>
+    <string-array name="filter_names">
+        <item>Gaussian Blur</item>
+        <item>Box Blur</item>
+        <item>Emboss</item>
+        <item>Sharpen</item>
+        <item>Edge detection</item>
+    </string-array>
+    
+    <string-array name="resolutions">
+        <item>320x240</item>
+        <item>640x480</item>
+        <item>800x480</item>        
+    </string-array>
+    
+    <string-array name="backrounds">
+        <item>desert</item>
+        <item>sea</item>
+        <item>forest</item>
+    </string-array>
+    
+    <string-array name="background_names">
+        <item>Desert</item>
+        <item>Sea</item>
+        <item>Forest</item>
+    </string-array>
+</resources>

@@ -1,0 +1,71 @@
+apply plugin: 'com.android.application'
+import org.apache.tools.ant.taskdefs.condition.Os
+
+android {
+    compileSdkVersion 10
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "astarasikov.camerastreaming"
+        minSdkVersion 10
+        targetSdkVersion 10
+
+        ndk {
+            moduleName "dsp-jni"
+        }
+    }
+
+
+    sourceSets.main {
+        jni.srcDirs = [] // This prevents the auto generation of Android.mk
+        jniLibs.srcDir 'src/main/libs' // This is not necessary unless you have precompiled libraries in your project.
+    }
+
+    // call regular ndk-build(.cmd) script from app directory
+
+    task buildNative(type: Exec, description: 'Compile JNI source via NDK') {
+        def ndkDir = android.ndkDirectory
+        if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+            commandLine "$ndkDir/build/ndk-build.cmd",
+                    '-C', file('src/main/jni').absolutePath
+        } else {
+            commandLine "$ndkDir/build/ndk-build",
+                    '-C', file('src/main/jni').absolutePath,
+                    '-j', Runtime.runtime.availableProcessors(),
+                    'all',
+                    'NDK_DEBUG=1'
+        }
+    }
+
+    task cleanNative(type: Exec, description: 'Clean JNI object files') {
+        def ndkDir = android.ndkDirectory
+        if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+            commandLine "$ndkDir/build/ndk-build.cmd",
+                    '-C', file('src/main/jni').absolutePath
+        } else {
+            commandLine "$ndkDir/build/ndk-build",
+                    '-C', file('src/main/jni').absolutePath,
+                    'clean'
+        }
+    }
+
+    clean.dependsOn 'cleanNative'
+
+    tasks.withType(JavaCompile) {
+        compileTask -> compileTask.dependsOn buildNative
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}

@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "/home/teocci/AndroidSRC/Camtest01101/app/build/intermediates/res/merged/debug/drawable/hat.png",
+        "source": "/home/teocci/AndroidSRC/Camtest01101/app/src/main/res/drawable/hat.png"
+    },
+    {
+        "merged": "/home/teocci/AndroidSRC/Camtest01101/app/build/intermediates/res/merged/debug/drawable/moustache.png",
+        "source": "/home/teocci/AndroidSRC/Camtest01101/app/src/main/res/drawable/moustache.png"
+    },
+    {
+        "merged": "/home/teocci/AndroidSRC/Camtest01101/app/build/intermediates/res/merged/debug/drawable/beard.png",
+        "source": "/home/teocci/AndroidSRC/Camtest01101/app/src/main/res/drawable/beard.png"
+    },
+    {
+        "merged": "/home/teocci/AndroidSRC/Camtest01101/app/build/intermediates/res/merged/debug/drawable/ic_launcher.png",
+        "source": "/home/teocci/AndroidSRC/Camtest01101/app/src/main/res/drawable/ic_launcher.png"
+    },
+    {
+        "merged": "/home/teocci/AndroidSRC/Camtest01101/app/build/intermediates/res/merged/debug/drawable/coolface.png",
+        "source": "/home/teocci/AndroidSRC/Camtest01101/app/src/main/res/drawable/coolface.png"
+    }
+]
